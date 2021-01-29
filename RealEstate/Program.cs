@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.IO;
+using System.Linq;
 
 namespace RealEstate
 {
@@ -51,14 +49,18 @@ namespace RealEstate
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("                         ");
             Console.ResetColor();
-            Console.WriteLine();                   
+            Console.WriteLine();
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
 
-            string path = @"C:\D\data estate\dataEstate.txt";
-            string[] lines = File.ReadAllLines(path);
+            string path = @"C:\Temp\RealEstateData.csv";
             List<Estate> estates = new List<Estate>();
-            foreach(string line in lines)
+            if (!File.Exists(path))
+                File.Create(path).Dispose();
+
+            string[] lines = File.ReadAllLines(path);
+
+            foreach (string line in lines)
             {
                 string[] values = line.Split(',');
                 Estate p = new Estate
@@ -71,11 +73,12 @@ namespace RealEstate
                     Price = int.Parse(values[5])
                 };
                 estates.Add(p);
-              }
+            }
+
 
             //meny message with 6 options:
             bool go = true;
-            while(go)
+            while (go)
             {
                 Console.WriteLine("Please select one of the options:");
                 Console.WriteLine();
@@ -88,8 +91,9 @@ namespace RealEstate
 
                 Console.WriteLine();
                 Console.Write("Select option: ");
-                try {
-                      int option = int.Parse(Console.ReadLine());
+                try
+                {
+                    int option = int.Parse(Console.ReadLine());
 
                     if (option == 1)
                     {
@@ -206,11 +210,11 @@ namespace RealEstate
 
                 }
                 catch { Console.WriteLine("You did not wrote number"); }
-             
-                
+
+
             }
-          
-            
+
+
         }
     }
 }
