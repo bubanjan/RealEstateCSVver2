@@ -98,6 +98,9 @@ namespace RealEstate
                     if (option == 1)
                     {
                         //show all properties
+                        if(estates.Count == 0)
+                            Console.WriteLine("\n" + " There is no real estates to show " + "\n");
+
                         Display(estates);
                     }
                     else if (option == 2)
@@ -152,6 +155,8 @@ namespace RealEstate
 
 
                         List<Estate> searchSize = estates.Where(s => s.Size >= min && s.Size <= max).ToList<Estate>();
+                        if (searchSize.Count == 0)
+                            Console.WriteLine("\n" + " There is no real estates to show " + "\n");
 
                         Display(searchSize);
                     }
@@ -170,6 +175,9 @@ namespace RealEstate
 
                         List<Estate> searchPrice = estates.Where(s => s.Price >= min && s.Price <= max).ToList<Estate>();
 
+                        if (searchPrice.Count == 0)
+                            Console.WriteLine("\n" + " There is no real estates to show " + "\n");
+
                         Display(searchPrice);
                     }
 
@@ -183,10 +191,11 @@ namespace RealEstate
                             if (estates[i].Id == iddel)
                             {
                                 estates.Remove(estates[i]);
+                                Console.WriteLine("The property is deleted");
                             }
                         }
                         Console.WriteLine();
-                        Console.WriteLine("The property is deleted");
+                       
                         Console.WriteLine();
 
 
