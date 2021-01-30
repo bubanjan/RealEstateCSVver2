@@ -33,28 +33,8 @@ namespace RealEstate
 
         }
 
+      
         static void Logo()
-        {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.Write("                             ");
-            Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.Blue;
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" WELCOME TO REAL ESTATE ");
-            Console.ResetColor();
-            Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("                         ");
-            Console.ResetColor();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.ForegroundColor = ConsoleColor.Green;
-        }
-
-        static void Logo2()
         {
             
             Console.BackgroundColor = ConsoleColor.DarkGreen;
@@ -106,7 +86,7 @@ namespace RealEstate
             bool go = true;
             while (go)
             {
-                Logo2();
+                Logo();
               
                 Console.WriteLine("Please select one of the options:");
                 Console.WriteLine();
