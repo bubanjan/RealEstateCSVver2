@@ -33,7 +33,7 @@ namespace RealEstate
 
         }
 
-        static void Main(string[] args)
+        static void Logo()
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.BackgroundColor = ConsoleColor.Yellow;
@@ -52,6 +52,32 @@ namespace RealEstate
             Console.WriteLine();
             Console.WriteLine();
             Console.ForegroundColor = ConsoleColor.Green;
+        }
+
+        static void Logo2()
+        {
+            
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.Write("                             ");
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.Write(" WELCOME TO REAL ESTATE ");
+            Console.ResetColor();
+            Console.BackgroundColor = ConsoleColor.DarkGreen;
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("                         ");
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.ForegroundColor = ConsoleColor.Green;
+        }
+
+        static void Main(string[] args)
+        {
+            
 
             string path = @"C:\Temp\RealEstateData.csv";
             List<Estate> estates = new List<Estate>();
@@ -80,6 +106,7 @@ namespace RealEstate
             bool go = true;
             while (go)
             {
+                Logo2();
               
                 Console.WriteLine("Please select one of the options:");
                 Console.WriteLine();
@@ -221,6 +248,12 @@ namespace RealEstate
                         }
                         File.WriteAllText(path, all);
                         go = false;
+                    }
+
+                    else
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Please write number between 1 to 6");
                     }
 
 
