@@ -25,8 +25,8 @@ namespace RealEstate
                 Console.WriteLine("ID: " + p.Id + " Type: " + p.Type);
                 Console.WriteLine("Location: " + p.Location);
                 Console.WriteLine("Description: " + p.Description);
-                Console.WriteLine("Size : " + p.Size);
-                Console.WriteLine("Price: " + p.Price + ", Price per m2 is: " + pricePerM + " EUR/m2");
+                Console.WriteLine("Size : " + p.Size + " m2");
+                Console.WriteLine("Price: " + p.Price + " EUR, Price per m2 is: " + pricePerM + " EUR/m2");
                 Console.WriteLine("---------------------------------------------------------------------------------------------------------");
             }
 
