@@ -80,6 +80,7 @@ namespace RealEstate
             bool go = true;
             while (go)
             {
+              
                 Console.WriteLine("Please select one of the options:");
                 Console.WriteLine();
                 Console.WriteLine("1. Show all properties");
@@ -91,20 +92,23 @@ namespace RealEstate
 
                 Console.WriteLine();
                 Console.Write("Select option: ");
+             
                 try
                 {
                     int option = int.Parse(Console.ReadLine());
 
                     if (option == 1)
                     {
+                        Console.Clear();
                         //show all properties
-                        if(estates.Count == 0)
+                        if (estates.Count == 0)
                             Console.WriteLine("\n" + " There is no real estates to show " + "\n");
 
                         Display(estates);
                     }
                     else if (option == 2)
                     {
+                        Console.Clear();
                         //enter new property
                         Console.WriteLine("Enter a new estate ");
 
@@ -143,6 +147,7 @@ namespace RealEstate
 
                     else if (option == 3)
                     {
+                        Console.Clear();
                         //search by size
                         Console.WriteLine("Please write minimal size in m2:");
                         int min = int.Parse(Console.ReadLine());
@@ -163,6 +168,7 @@ namespace RealEstate
 
                     else if (option == 4)
                     {
+                        Console.Clear();
                         //search by price
                         Console.WriteLine("Please write minimal price: ");
                         int min = int.Parse(Console.ReadLine());
@@ -183,6 +189,7 @@ namespace RealEstate
 
                     else if (option == 5)
                     {
+                        Console.Clear();
                         //delete property by id number
                         Console.WriteLine("Please enter property ID number to delete it: ");
                         int iddel = int.Parse(Console.ReadLine());
