@@ -238,7 +238,11 @@ namespace RealEstate
 
 
                 }
-                catch { Console.WriteLine("You did not wrote number"); }
+                catch 
+                {
+                    Console.Clear();
+                    Console.WriteLine("You did not wrote number, please try again"); 
+                }
 
 
             }
