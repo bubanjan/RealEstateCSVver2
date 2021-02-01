@@ -241,7 +241,7 @@ namespace RealEstate
                 catch 
                 {
                     Console.Clear();
-                    Console.WriteLine("You did not wrote number, please try again"); 
+                    Console.WriteLine("You didn't write number, please try again"); 
                 }
 
 
